@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-mono: "Space Mono", "Courier New", monospace;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+.pkosmos {
+    font-family: 'Planet-Kosmos';
+    letter-spacing: 2px;
+}
+
+.panel-color {background-color: #060707;}
+.panel-color-fg {background-color: #0a0a0a;}
+.panel-border {border-color: #171c1c;}
+
+@font-face {
+    font-family: 'Planet-Kosmos';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/pkosmos.TTF'); /* IE9 Compat Modes */
+    src: local(''), url('/fonts/pkosmos.TTF') format('truetype')
+}
+
+/* Added fade-in animation for tab transitions */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
