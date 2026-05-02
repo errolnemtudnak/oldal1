@@ -9,6 +9,6 @@ const config = {
 	},
 };
  
-config.paths = { base: process.argv.includes('dev') ? '' : "/ngentotstw" }
+config.paths = { base: process.argv.includes('dev') ? '' : "/oldal1" }
  
 export default config;
